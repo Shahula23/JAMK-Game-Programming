@@ -1,5 +1,7 @@
 using UnityEngine;
 
+namespace AG2163
+
 public class EncapsulationScript2 : MonoBehaviour
 {
     private int someValue = 5;
