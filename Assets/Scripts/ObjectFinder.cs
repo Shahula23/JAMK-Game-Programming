@@ -1,29 +1,32 @@
 using UnityEngine;
 
-public class SimpleFinder : MonoBehaviour
+namespace AG2163
 {
-    public GameObject[] dragAndDropObjects; // Option 1: Assign cubes in Inspector
-
-    void Start()
+    public class SimpleFinder : MonoBehaviour
     {
-        ////Method 1: Using Drag and Drop(Inspector assignment)
-        //foreach (GameObject cube in dragAndDropObjects)
-        //{
-        //    Renderer rend = cube.GetComponent<Renderer>();
-        //    if (rend != null)
-        //    {
-        //        rend.material.color = Color.green; // Change the color of the cube
-        //    }
-        //}
+        public GameObject[] dragAndDropObjects; // Option 1: Assign cubes in Inspector
 
-        //Method 2: Using Tag(Find cubes by their tag)
-        GameObject[] cubes = GameObject.FindGameObjectsWithTag("Cube"); // Find all cubes by their tag
-        foreach (GameObject cube in cubes)
+        void Start()
         {
-            Renderer rend = cube.GetComponent<Renderer>();
-            if (rend != null)
+            ////Method 1: Using Drag and Drop(Inspector assignment)
+            //foreach (GameObject cube in dragAndDropObjects)
+            //{
+            //    Renderer rend = cube.GetComponent<Renderer>();
+            //    if (rend != null)
+            //    {
+            //        rend.material.color = Color.green; // Change the color of the cube
+            //    }
+            //}
+
+            //Method 2: Using Tag(Find cubes by their tag)
+            GameObject[] cubes = GameObject.FindGameObjectsWithTag("Cube"); // Find all cubes by their tag
+            foreach (GameObject cube in cubes)
             {
-                rend.material.color = Color.green; // Change color to green
+                Renderer rend = cube.GetComponent<Renderer>();
+                if (rend != null)
+                {
+                    rend.material.color = Color.green; // Change color to green
+                }
             }
         }
     }

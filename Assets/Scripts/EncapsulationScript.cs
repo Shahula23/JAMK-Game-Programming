@@ -1,15 +1,16 @@
 using UnityEngine;
 
 namespace AG2163
-
-public class EncapsulationScript : MonoBehaviour
 {
-    public EncapsulationScript2 helper;
-
-    void Start()
+    public class EncapsulationScript : MonoBehaviour
     {
-        helper.ModifyValue(10);
+        public EncapsulationScript2 helper;
 
-        Debug.Log("Modified Value: " + helper.GetValue());
+        void Start()
+        {
+            helper.ModifyValue(10);
+
+            Debug.Log("Modified Value: " + helper.GetValue());
+        }
     }
 }
