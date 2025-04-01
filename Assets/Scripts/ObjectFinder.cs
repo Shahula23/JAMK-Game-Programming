@@ -25,7 +25,7 @@ namespace AG2163
                 Renderer rend = cube.GetComponent<Renderer>();
                 if (rend != null)
                 {
-                    rend.material.color = Color.green; // Change color to green
+                    rend.material.color = Color.yellow; // Change color to green
                 }
             }
         }
